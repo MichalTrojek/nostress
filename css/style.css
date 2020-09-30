@@ -1,0 +1,104 @@
+.heading-1 {
+  font-family: var(--font-primary);
+  font-size: 6.4rem;
+  font-weight: 900;
+  color: var(--color-primary); }
+
+.heading-2 {
+  font-family: var(--font-primary);
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: var(--color-primary); }
+
+.heading-3 {
+  font-family: var(--font-primary);
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: var(--color-primary); }
+
+.heading-5 {
+  font-family: var(--font-primary);
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--color-primary); }
+
+:root {
+  --font-primary: "Oswald", sans-serif;
+  --color-primary: #ffffff;
+  --color-secondary: #000000;
+  --color-tertiary: #f2c48c; }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body > * {
+  font-family: sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  font-size: 1.6rem; }
+
+.container {
+  display: grid;
+  grid-template-rows: 90vh 70vh 60vh 50vh 60vh 60vh; }
+
+main {
+  grid-column: 1/ -1;
+  grid-row: 2/6; }
+
+.navigation__logo {
+  max-height: 20rem;
+  max-width: 100%; }
+
+.navigation__list {
+  display: none; }
+
+.header {
+  grid-row: 1 / span 1;
+  background-image: url(../img/header.png);
+  background-position: top;
+  background-size: auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: max-content max-content 1fr;
+  row-gap: 3rem; }
+  .header__heading {
+    grid-row: 2 / span 1;
+    grid-column: 2/12;
+    width: 70%;
+    text-align: left;
+    font-size: 2rem; }
+  .header__button:link, .header__button:focus {
+    text-decoration: none; }
+  .header__button {
+    grid-row: 3 / span 1;
+    grid-column: 2/3;
+    align-self: start;
+    color: var(--color-secondary);
+    background-color: var(--color-tertiary);
+    padding: 1rem 2rem 1rem 2rem;
+    font-weight: 600;
+    border-radius: 0.3rem;
+    letter-spacing: 0.3rem;
+    white-space: nowrap;
+    text-transform: uppercase; }
+
+.menu {
+  background-color: grey; }
+
+.delivery {
+  background-color: wheat; }
+
+.drink {
+  background-color: royalblue; }
+
+.footer {
+  background-color: greenyellow;
+  grid-column: 1/ -1;
+  grid-row: 6 / span 1; }
