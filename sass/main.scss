@@ -1,10 +1,14 @@
-@import "abstracts/typography";
+@import "base/typography";
+@import "base/animations";
 @import "base/base";
+@import "base/reset";
 @import "components/navigation";
 @import "components/medailon";
 @import "components/button";
+@import "components/date-box";
+@import "components/menu";
 @import "layout/header";
-@import "layout/menu";
+@import "layout/weekly";
 @import "layout/delivery";
 @import "layout/drink";
 @import "layout/news";

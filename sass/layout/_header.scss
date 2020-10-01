@@ -3,8 +3,6 @@
     background-image: url(../img/header.png);
     background-position: top;
     background-size: auto;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
     grid-template-rows: max-content max-content max-content 1fr;
     row-gap: 3.5rem;
     &__heading {
@@ -16,33 +14,5 @@
         font-size: 2.5rem;
         animation: moveInFromLeft 1.5s;
         backface-visibility: hidden;
-    }
-}
-
-@keyframes moveInFromLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-10rem);
-    }
-    50% {
-        transform: translateX(0.2rem);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes moveInFromRight {
-    0% {
-        opacity: 0;
-        transform: translateX(10rem);
-    }
-    50% {
-        transform: translateX(0.2rem);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
     }
 }

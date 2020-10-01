@@ -5,22 +5,6 @@
     --color-tertiary: #f2c48c;
 }
 
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    border: 0;
-    outline: 0;
-}
-
-ul,
-li {
-    text-decoration: none;
-    list-style-type: none;
-}
-
 html {
     font-size: 62.5%;
 }
@@ -34,9 +18,14 @@ body {
     }
 }
 
-.container {
+.container-main-content {
     display: grid;
     grid-template-rows: 90vh 70vh 60vh 50vh 60vh 60vh;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
 }
 
 main {
