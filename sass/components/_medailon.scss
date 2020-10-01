@@ -1,0 +1,42 @@
+.medailon {
+    grid-row: 2 / span 1;
+    grid-column: 3 / span 9;
+    justify-self: right;
+    height: 12rem;
+    width: 12rem;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    position: relative;
+    animation: falldown 2s;
+    backface-visibility: hidden;
+    &__text {
+        color: var(--color-secondary);
+        text-transform: uppercase;
+        position: absolute;
+        text-align: center;
+        font-size: 1.4rem;
+        letter-spacing: 0.2rem;
+        font-weight: 700;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes falldown {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+        transform: translateY(-120rem);
+    }
+    30% {
+        transform: scale(0.2);
+    }
+    50% {
+        transform: translateY(-0.2rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

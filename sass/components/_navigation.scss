@@ -1,11 +1,17 @@
 .navigation {
+    grid-column: 1/ -1;
+    grid-row: 1 / span 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem;
+    align-items: center;
     &__logo {
-        max-height: 20rem;
+        grid-column: 1 / span 2;
+        height: 7rem;
         max-width: 100%;
     }
     &__list {
         display: none;
     }
     &__item {}
-    &__medailon {}
 }

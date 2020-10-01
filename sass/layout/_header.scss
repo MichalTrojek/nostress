@@ -5,22 +5,25 @@
     background-size: auto;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: max-content max-content 1fr;
-    row-gap: 3rem;
+    grid-template-rows: max-content max-content max-content 1fr;
+    row-gap: 2rem;
     &__heading {
+        align-self: end;
         grid-row: 2 / span 1;
-        grid-column: 2/12;
-        width: 70%;
+        grid-column: 3 / span 1;
+        width: 80%;
         text-align: left;
-        font-size: 2rem;
+        font-size: 2.5rem;
+        animation: moveInFromLeft 1.5s;
+        backface-visibility: hidden;
     }
     &__button:link,
     &__button:focus {
         text-decoration: none;
     }
     &__button {
-        grid-row: 3 / span 1;
-        grid-column: 2/3;
+        grid-row: 4 / span 1;
+        grid-column: 3 / span 1;
         align-self: start;
         color: var(--color-secondary);
         background-color: var(--color-tertiary);
@@ -30,5 +33,26 @@
         letter-spacing: 0.3rem;
         white-space: nowrap;
         text-transform: uppercase;
+        transition: transform 0.2s;
+    }
+    &__button:hover {
+        transform: translateY(-0.2rem);
+    }
+    &__button:active {
+        transform: translateY(0.2rem);
+    }
+}
+
+@keyframes moveInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+    50% {
+        transform: translateX(0.2rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
