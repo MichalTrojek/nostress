@@ -1,3 +1,55 @@
 .delivery {
-    background-color: wheat;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    background-color: var(--color-secondary);
+    row-gap: 3rem;
+    &__header {
+        grid-column: 2 / 12;
+        grid-row: 1 / span 1;
+    }
+    &__text {
+        grid-column: 2 / 12;
+        grid-row: 2 / span 1;
+        span {
+            color: var(--color-tertiary);
+        }
+    }
+    &__button {
+        grid-column: 2 / 12;
+        grid-row: 3 / span 1;
+        text-align: center;
+    }
+}
+
+.delivery-menu {
+    border: 1px solid var(--color-primary);
+    grid-column: 2 / 12;
+    grid-row: 4 / span 1;
+    display: grid;
+    row-gap: 1rem;
+    padding: 2rem 1rem;
+    grid-template-columns: repeat(1, 1fr);
+    &__header {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+        font-size: 1.4rem;
+        justify-self: center;
+    }
+    &__icon {
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 1;
+        justify-self: center;
+    }
+    &__list {
+        grid-column: 1 / span 2;
+        list-style-position: inside;
+        text-indent: -1em;
+        padding-left: 1em;
+    }
+    &__item {
+        hyphens: auto;
+        span {
+            color: var(--color-tertiary);
+        }
+    }
 }
