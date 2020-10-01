@@ -1,1 +1,27 @@
-.button {}
+.button {
+    grid-column: 3 / span 1;
+    grid-row: 3 / span 1;
+    align-self: start;
+    color: var(--color-secondary);
+    background-color: var(--color-tertiary);
+    padding: 1rem 2rem 1rem 2rem;
+    font-weight: 600;
+    border-radius: 0.3rem;
+    letter-spacing: 0.3rem;
+    white-space: nowrap;
+    text-transform: uppercase;
+    transition: transform 0.2s;
+    &:link,
+    &:focus {
+        text-decoration: none;
+    }
+    &:hover {
+        transform: translateY(-0.2rem);
+    }
+    &:active {
+        transform: translateY(0.2rem);
+    }
+    &--animated {
+        animation: moveInFromRight 1.5s;
+    }
+}
