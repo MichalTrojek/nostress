@@ -3,6 +3,7 @@
     --color-primary: #ffffff;
     --color-secondary: #000000;
     --color-tertiary: #f2c48c;
+    --color-quaternary: #6f6150;
 }
 
 html {
@@ -11,21 +12,17 @@ html {
 
 body {
     >* {
-        font-family: sans-serif;
+        font-family: var(--font-primary);
         font-weight: 300;
         line-height: 1.6;
         font-size: 1.6rem;
+        color: var(--color-primary);
     }
 }
 
-.container-main-content {
+.container {
     display: grid;
-    grid-template-rows: 90vh 70vh 60vh 50vh 60vh 60vh;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 100vh 100vh 60vh 50vh 60vh 60vh;
 }
 
 main {

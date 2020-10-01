@@ -1,0 +1,10 @@
+.date-box {
+    background-color: var(--color-secondary);
+    border: 1px solid var(--color-quaternary);
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 1rem;
+    &--active {
+        background-color: var(--color-quaternary);
+    }
+}

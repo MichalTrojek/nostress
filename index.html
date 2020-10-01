@@ -12,8 +12,8 @@
 </head>
 
 <body>
-    <div class="container-main-content">
-        <header class="header grid" id="header">
+    <div class="container">
+        <header class="header" id="header">
             <nav class="navigation grid">
                 <img src="img/logo.png" alt="NoStress logo" class="navigation__logo">
                 <ul class="navigation__list">
@@ -28,19 +28,80 @@
                 <p class="medailon__text">nově kopečková zmrzlina</p>
             </div>
             <h1 class="header__heading heading-1">Nyní rozvážíme po celém Brně.</h1>
-            <a href="#" class="button button--animated">objednat rozvoz</a>
+            <a href="#" class="header__button button button--animated">objednat rozvoz</a>
         </header>
         <main>
-            <section class="weekly grid">
-                <h2 class="weekly__header">Týdenní menu</h2>
-                <p class="weekly__text">Polední Menu se skládá z hlavního chodu a polévky a je možno si ho objednat předem. <span class="weekly__text--yellow">Objednávku s 5 a více jídel Vám dovemezeme až domů.</span> Rozvoz jídel v tuto chvíli upravujeme a plánujeme možnost
-                    objednat z celého jídelního lístku. Objednávku do 10km Vám rádi zavezeme za 29,-. Objednávku se 3 a více jídly dovezeme zdarma. <span class="weekly__text--uppercase">nabídka platí do vyprodání zásob</span></p>
-                <p class="weekly__text">Objednávky na +420 732 161 372 nebo zde pomocí formuláře nebo na místě</p>
-                <div class="date-box">17. 8. - 21.8. 2020 / 10:30 - 14:00</div>
-                <div class="date-box--black">22. 8. - 26.8. 2020 / 10:30 - 14:00</div>
-                <a href="#" class="button">Objednat</a>
+            <section class="weekly">
+                <h2 class="weekly__header heading-2">Týdenní menu</h2>
+                <p class="weekly__text weekly__text-1">Polední Menu se skládá z hlavního chodu a polévky a je možno si ho objednat předem.<br> <span class="weekly__text--yellow">Objednávku s 5 a více jídel Vám dovemezeme až domů.</span><br> Rozvoz jídel v tuto chvíli upravujeme a plánujeme
+                    možnost objednat z celého jídelního lístku. <br> Objednávku do 10km Vám rádi zavezeme za 29,-. <br> Objednávku se 3 a více jídly dovezeme zdarma. <br> <span class="weekly__text--uppercase">nabídka platí do vyprodání zásob</span></p>
+                <p class="weekly__text weekly__text-2">Objednávky na +420 732 161 372 nebo zde pomocí formuláře nebo na místě</p>
+                <div class="weekly__box-1 date-box date-box--active">17. 8. - 21.8. 2020 / 10:30 - 14:00</div>
+                <div class="weekly__box-2 date-box">22. 8. - 26.8. 2020 / 10:30 - 14:00</div>
+                <a href="#" class="weekly__button button">Objednat</a>
+                <div class="menu">
+                    <h3 class="menu__header heading-3">menu</h3>
+                    <img src="img/menu-icon.png" alt="icon of cutlery" class="menu__icon">
+                    <ol class="menu__list">
+                        <li class="menu__item">Smažený sýr, hranolky, tatarka <span>109,-</span> (1,3,7,10)</li>
+                        <li class="menu__item">Vepřový řízek, domací bramborový salát s majonézou <span>119,-</span> (1,3,7,9,10)</li>
+                        <li class="menu__item">Vepřová plec po cikánsku s rýží <span>119,-</span> (1)</li>
+                        <li class="menu__item">Wok nudle s kuřecích masem a zeleninou <span>129,-</span> (1,6)</li>
+                        <li class="menu__item">Zeleninový salát s hovězím trhaným masem a jogurtovým dipem <span>129,-</span> (3,7)</li>
+                        <li class="menu__item">300g žebra z pečeně, chléb, horčice, křen <span>129,-</span> (1,10)</li>
+                        <li class="menu__item">Vepřová krkovice na grilu, krokety, tatarka <span>139,-</span> (1,3,7,10,12)</li>
+                        <li class="menu__item">Hovězí líčka na kořenové zelenině s bramborovou kaší <span>159,-</span> (1,9)</li>
+                        <li class="menu__item">Tvarohové knedlíky s jahodovou náplní, tvaroh, máslo, cukr <span>89,-</span> (1,7)</li>
+                    </ol>
+                </div>
+                <div class="soups">
+                    <h3 class="soups__header heading-3">POLÉVKA k menu zdarma</h3>
+                    <img src="img/soups-logo.png" alt="icon of spoon" class="soups__icon">
+                    <table class="soups__table">
+                        <tr>
+                            <td>Pondělí</td>
+                            <td>17.8.</td>
+                            <td>Drůbeží vývar s těstovinou</td>
+                            <td>(1,3,9)</td>
+                        </tr>
+                        <tr>
+                            <td>Uterý</td>
+                            <td>18.8.</td>
+                            <td>Gulášová</td>
+                            <td>(1,3,9)</td>
+                        </tr>
+                        <tr>
+                            <td>Středa</td>
+                            <td>19.8.</td>
+                            <td>Dýňový krém</td>
+                            <td>(1,3,9)</td>
+                        </tr>
+                        <tr>
+                            <td>Čtvrtek</td>
+                            <td>20.8.</td>
+                            <td>Česnečka</td>
+                            <td>(1,3,9)</td>
+                        </tr>
+                        <tr>
+                            <td>Pátek</td>
+                            <td>21.8.</td>
+                            <td>Bramborová a houbami</td>
+                            <td>(1,3,9)</td>
+                        </tr>
+                    </table>
+
+                </div>
+
+                <div class="soups-info">
+                    <p>Cena namostatné polévky <span>39,-</span></p>
+                    <p>Seznam alergenů na vyžádání u obsluhy.</p>
+                </div>
+
+
+
 
             </section>
+            <section class="order">order</section>
             <section class="delivery">delivery</section>
             <section class="drink">drink</section>
             <section class="news">news</section>
