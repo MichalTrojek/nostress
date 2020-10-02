@@ -1,3 +1,24 @@
 .drink {
-    background-color: royalblue;
+    background-image: url("../img/drink.png");
+    background-position: top;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding-bottom: 2rem;
+    row-gap: 2rem;
+    &__header {
+        white-space: nowrap;
+        grid-row: 1 / span 1;
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+}
+
+.cta {
+    grid-row: 2 / span 1;
+    grid-column: 2 / 12;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

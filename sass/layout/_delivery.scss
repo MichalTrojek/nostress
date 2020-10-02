@@ -3,6 +3,7 @@
     grid-template-columns: repeat(12, 1fr);
     background-color: var(--color-secondary);
     row-gap: 3rem;
+    padding: 2rem 0;
     &__header {
         grid-column: 2 / 12;
         grid-row: 1 / span 1;

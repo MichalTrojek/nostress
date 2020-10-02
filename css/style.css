@@ -73,7 +73,8 @@ body > * {
   color: var(--color-primary); }
 
 .container {
-  display: grid; }
+  display: grid;
+  grid-template-rows: 100vh; }
 
 main {
   grid-column: 1/ -1;
@@ -279,7 +280,8 @@ main {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   background-color: var(--color-secondary);
-  row-gap: 3rem; }
+  row-gap: 3rem;
+  padding: 2rem 0; }
   .delivery__header {
     grid-column: 2 / 12;
     grid-row: 1 / span 1; }
@@ -321,7 +323,61 @@ main {
       color: var(--color-tertiary); }
 
 .drink {
-  background-color: royalblue; }
+  background-image: url("../img/drink.png");
+  background-position: top;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  padding-bottom: 2rem;
+  row-gap: 2rem; }
+  .drink__header {
+    white-space: nowrap;
+    grid-row: 1 / span 1;
+    grid-column: 1 / -1;
+    text-align: center; }
+
+.cta {
+  grid-row: 2 / span 1;
+  grid-column: 2 / 12;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+.news {
+  background-image: url(../img/news.png);
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  row-gap: 1rem; }
+  .news__header {
+    color: var(--color-secondary);
+    grid-row: 1 / span 1;
+    grid-column: 1/ -1;
+    text-align: center; }
+  .news__card1 {
+    grid-row: 2 / span 1;
+    grid-column: 1 / -1; }
+  .news__card2 {
+    grid-row: 3 / span 1;
+    grid-column: 1 / -1; }
+
+.card {
+  background-color: var(--color-primary);
+  hyphens: auto;
+  border-radius: 3px;
+  max-width: 51rem; }
+  .card__img {
+    height: auto;
+    max-width: 100%; }
+  .card__header {
+    padding: 0 1rem;
+    color: var(--color-secondary);
+    text-align: left; }
+  .card__text {
+    padding: 1rem;
+    color: var(--color-secondary); }
 
 .footer {
   background-color: greenyellow;
