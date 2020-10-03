@@ -8,6 +8,11 @@
 
 //test
 @mixin respond($breakpoint) {
+    @if $breakpoint==999 {
+        @media only screen and (min-width: 62.43em) {
+            @content;
+        }
+    }
     @if $breakpoint==777 {
         @media only screen and (min-width: 48.56em) {
             @content;
