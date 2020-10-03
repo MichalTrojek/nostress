@@ -1,3 +1,8 @@
+/*
+ @include respond(tab-land) {
+        font-size: 56.25%;
+    }
+*/
 .heading-1 {
   font-family: var(--font-primary);
   font-size: 6.4rem;
@@ -65,14 +70,12 @@
 html {
   font-size: 62.5%; }
 
-body {
-  max-width: 120rem; }
-  body > * {
-    font-family: var(--font-primary);
-    font-weight: 300;
-    line-height: 1.6;
-    font-size: 1.6rem;
-    color: var(--color-primary); }
+body > * {
+  font-family: var(--font-primary);
+  font-weight: 300;
+  line-height: 1.6;
+  font-size: 1.6rem;
+  color: var(--color-primary); }
 
 .container {
   display: grid;
@@ -219,37 +222,6 @@ main {
   .soups-info span {
     color: var(--color-tertiary); }
 
-.infobox {
-  max-width: 37.5rem;
-  grid-row: 2 / span 1;
-  grid-column: 1 / span 1;
-  border: 1px solid var(--color-primary);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-  .infobox__phone {
-    color: var(--color-tertiary);
-    font-size: 2.2rem; }
-  .infobox__mail {
-    color: var(--color-tertiary);
-    font-size: 2rem; }
-  .infobox__address {
-    white-space: nowrap; }
-
-.social {
-  max-width: 37.5rem;
-  grid-row: 3 / span 1;
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
-  .social__facebook, .social__instagram {
-    height: 4rem;
-    max-width: 100%; }
-  .social__message {
-    height: 5rem;
-    max-width: 100%; }
-
 .header {
   grid-row: 1 / span 1;
   background-image: url(../img/header.png);
@@ -383,7 +355,8 @@ main {
   background-size: cover;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  row-gap: 1rem; }
+  row-gap: 1rem;
+  padding-bottom: 2rem; }
   .news__header {
     color: var(--color-secondary);
     grid-row: 1 / span 1;
@@ -391,10 +364,10 @@ main {
     text-align: center; }
   .news__card1 {
     grid-row: 2 / span 1;
-    grid-column: 1 / -1; }
+    grid-column: 2 / 12; }
   .news__card2 {
     grid-row: 3 / span 1;
-    grid-column: 1 / -1; }
+    grid-column: 2 / 12; }
 
 .card {
   background-color: var(--color-primary);
@@ -413,30 +386,79 @@ main {
     color: var(--color-secondary); }
 
 .footer {
-  background-color: var(--color-secondary);
   grid-column: 1/ -1;
   grid-row: 6 / span 1;
-  padding: 1rem;
   display: grid;
-  row-gap: 3rem; }
+  grid-template-columns: repeat(12, 1fr);
+  row-gap: 2rem;
+  background-color: var(--color-secondary); }
+  @media only screen and (min-width: 48.56em) {
+    .footer {
+      column-gap: 2rem; } }
   .footer__header {
-    grid-row: 1 / span 1;
     grid-column: 1/ -1;
     text-align: center; }
+  .footer__info {
+    grid-column: 2/ 12; }
+    @media only screen and (min-width: 48.56em) {
+      .footer__info {
+        grid-row: 2 / span 1;
+        grid-column: 2/ 7; } }
   .footer__map {
-    height: 20rem;
-    max-width: 100%;
-    grid-row: 4 / span 1; }
-  .footer__bottom {
-    padding: 0 1rem 1rem 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    align-items: center; }
+    grid-row: 2 / span 1;
+    grid-column: 2 / 12;
+    width: 100%; }
+    @media only screen and (min-width: 48.56em) {
+      .footer__map {
+        grid-column: 7/ 12; } }
 
-.createdby {
-  margin-bottom: 1rem;
+.infobox {
+  border: 1px solid var(--color-primary);
   display: flex;
-  justify-content: space-around;
-  align-items: center; }
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem; }
+  .infobox__phone {
+    color: var(--color-tertiary);
+    font-size: 2.2rem; }
+  .infobox__mail {
+    color: var(--color-tertiary);
+    font-size: 2rem; }
+  .infobox__address {
+    white-space: nowrap; }
+
+.social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem; }
+  .social__facebook, .social__instagram {
+    height: 4rem;
+    max-width: 100%; }
+  .social__message {
+    height: 4rem;
+    max-width: 100%; }
+
+.bottom {
+  grid-column: 1/ -1;
+  padding: 1rem 1rem 1rem 1rem;
+  background-color: var(--color-quaternary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center; }
+  @media only screen and (min-width: 48.56em) {
+    .bottom {
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center; } }
+  .bottom__information:link, .bottom__information:visited {
+    color: var(--color-primary); }
+  .bottom__createdby {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .bottom__createdby > img {
+      margin-right: 1rem; }

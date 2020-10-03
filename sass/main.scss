@@ -1,3 +1,4 @@
+@import "abstracts/mixins";
 @import "base/typography";
 @import "base/animations";
 @import "base/base";
@@ -8,7 +9,6 @@
 @import "components/date-box";
 @import "components/menu";
 @import "components/soups";
-@import "components/infobox";
 @import "layout/header";
 @import "layout/weekly";
 @import "layout/delivery";
