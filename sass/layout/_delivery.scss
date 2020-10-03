@@ -11,6 +11,9 @@
     &__text {
         grid-column: 2 / 12;
         grid-row: 2 / span 1;
+        @include respond(777) {
+            grid-column: 2/ 10;
+        }
         span {
             color: var(--color-tertiary);
         }
@@ -19,6 +22,10 @@
         grid-column: 2 / 12;
         grid-row: 3 / span 1;
         text-align: center;
+        @include respond(777) {
+            grid-row: 2 / span 1;
+            grid-column: 11 / span 1;
+        }
     }
 }
 
