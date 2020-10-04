@@ -152,11 +152,17 @@ main {
     animation: moveInFromRight 1.5s; }
 
 .date-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--color-secondary);
   border: 1px solid var(--color-quaternary);
   cursor: pointer;
   border-radius: 3px;
   padding: 1rem; }
+  @media only screen and (min-width: 48.56em) {
+    .date-box {
+      max-width: 35rem; } }
   .date-box--active {
     background-color: var(--color-quaternary); }
 
@@ -235,6 +241,9 @@ main {
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: max-content max-content max-content 1fr;
   row-gap: 3.5rem; }
+  @media only screen and (min-width: 48.56em) {
+    .header {
+      background-size: cover; } }
   .header__heading {
     align-self: end;
     grid-column: 2 / span 2;
@@ -254,7 +263,11 @@ main {
   grid-template-columns: repeat(12, 1fr);
   padding: 2rem 0;
   background-color: var(--color-secondary);
-  row-gap: 2rem; }
+  row-gap: 2rem;
+  align-items: center; }
+  @media only screen and (min-width: 48.56em) {
+    .weekly {
+      column-gap: 2rem; } }
   .weekly__header {
     grid-column: 2 / span 1;
     grid-row: 1 / span 1;
@@ -279,14 +292,15 @@ main {
     @media only screen and (min-width: 48.56em) {
       .weekly__box-1 {
         grid-row: 4 / span 1;
-        grid-column: 2 / 4; } }
+        grid-column: 2 / span 2; } }
   .weekly__box-2 {
     grid-column: 2 / 12;
-    grid-row: 5 / span 1; }
+    grid-row: 5 / span 1;
+    white-space: nowrap; }
     @media only screen and (min-width: 48.56em) {
       .weekly__box-2 {
         grid-row: 4 / span 1;
-        grid-column: 5 / 10; } }
+        grid-column: 5 / span 3; } }
   .weekly__button {
     grid-column: 2/ 12;
     grid-row: 6 / span 1;
