@@ -79,7 +79,7 @@ body > * {
 
 .container {
   display: grid;
-  grid-template-rows: 100vh; }
+  grid-template-rows: 80vh; }
 
 main {
   grid-column: 1/ -1;
@@ -95,39 +95,71 @@ main {
   outline: 0; }
 
 .navigation {
-  grid-column: 2/ -1;
   grid-row: 1 / span 1;
-  align-items: center; }
+  grid-column: 2/ -1;
+  align-items: center;
+  display: flex;
+  justify-content: space-between; }
+  @media only screen and (min-width: 75em) {
+    .navigation {
+      grid-column: 3/ 11; } }
   .navigation__logo {
-    grid-column: 1 / span 10;
-    justify-self: start;
-    height: auto;
+    height: 5rem;
     max-width: 100%; }
   .navigation__list {
-    display: none; }
+    display: none;
+    list-style-type: none; }
+    @media only screen and (min-width: 48.56em) {
+      .navigation__list {
+        display: grid;
+        grid-template-columns: repeat(5, max-content); } }
+    @media only screen and (min-width: 75em) {
+      .navigation__list {
+        grid-column: 3/10;
+        column-gap: 2rem; } }
+  .navigation__medailon {
+    margin-right: 2rem; }
+  .navigation__item {
+    text-transform: uppercase;
+    padding: 0.5rem; }
+    .navigation__item:hover {
+      color: var(--color-secondary);
+      background-color: var(--color-tertiary); }
+  .navigation__link, .navigation__link:link, .navigation__link:visited {
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--color-white); }
 
 .medailon {
-  grid-row: 4 / span 1;
-  grid-column: 2 / span 1;
-  justify-self: left;
   height: 9rem;
   width: 9rem;
   border-radius: 50%;
   background-color: var(--color-primary);
   position: relative;
-  animation: moveUp 2s;
   backface-visibility: hidden; }
+  @media only screen and (min-width: 48.56em) {
+    .medailon {
+      width: 8rem;
+      height: 8rem; } }
+  @media only screen and (min-width: 62.43em) {
+    .medailon {
+      width: 10rem;
+      height: 10rem; } }
   .medailon__text {
     color: var(--color-secondary);
     text-transform: uppercase;
     position: absolute;
     text-align: center;
     font-size: 1rem;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.3rem;
     font-weight: 700;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
+    @media only screen and (min-width: 62.43em) {
+      .medailon__text {
+        font-size: 1.3rem;
+        letter-spacing: 0.2rem; } }
 
 .button {
   color: var(--color-secondary);
@@ -167,12 +199,16 @@ main {
     background-color: var(--color-quaternary); }
 
 .menu {
-  grid-column: 2 / 12;
   grid-row: 7 / span 1;
+  grid-column: 2 / 12;
   display: grid;
   grid-column: repeat(2, 1fr);
   padding: 2rem 1rem;
   border: 1px solid var(--color-primary); }
+  @media only screen and (min-width: 70.62em) {
+    .menu {
+      grid-column: 2 / 7;
+      align-self: stretch; } }
   .menu__header {
     grid-column: 1 / span 1;
     grid-row: 1 / span 1;
@@ -182,12 +218,12 @@ main {
     grid-row: 1 / span 1;
     height: 4rem;
     max-width: 100%;
-    justify-self: end; }
+    justify-self: end;
+    margin-right: 1rem; }
   .menu__list {
     grid-column: 1 / span 2; }
   .menu__item {
     hyphens: auto;
-    margin-top: 1rem;
     list-style-position: inside;
     list-style-type: 1;
     text-indent: -1em;
@@ -195,9 +231,16 @@ main {
     .menu__item span {
       color: var(--color-tertiary); }
 
-.soups {
-  grid-column: 2 / 12;
+.soups-box {
   grid-row: 8 / span 1;
+  grid-column: 2 / 12; }
+  @media only screen and (min-width: 70.62em) {
+    .soups-box {
+      grid-row: 7 / 8;
+      grid-column: 7 / 12;
+      align-self: stretch; } }
+
+.soups {
   align-self: start;
   border: 1px solid var(--color-primary);
   padding: 2rem 1rem;
@@ -211,7 +254,8 @@ main {
   .soups__icon {
     grid-column: 2 / span 1;
     grid-row: 1 / span 1;
-    justify-self: end; }
+    justify-self: end;
+    margin-right: 1rem; }
   .soups__table {
     grid-column: 1 / span 2;
     grid-row: 2 / span 1; }
@@ -219,8 +263,6 @@ main {
       white-space: nowrap; }
 
 .soups-info {
-  grid-column: 2 / 12;
-  grid-row: 9 / span 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -234,8 +276,7 @@ main {
 .header {
   grid-row: 1 / span 1;
   background-image: url(../img/header.png);
-  background-position: top;
-  background-size: auto;
+  background-position: top center;
   display: grid;
   padding: 2rem 0;
   grid-template-columns: repeat(12, 1fr);
@@ -243,20 +284,31 @@ main {
   row-gap: 3.5rem; }
   @media only screen and (min-width: 48.56em) {
     .header {
+      row-gap: 6rem;
+      background-position: bottom;
       background-size: cover; } }
   .header__heading {
     align-self: end;
-    grid-column: 2 / span 2;
+    grid-column: 2 / -1;
     grid-row: 2 / span 1;
-    width: 85%;
+    width: 80%;
     text-align: left;
-    font-size: 2.5rem;
+    font-size: 3.2rem;
     animation: moveInFromLeft 1.5s;
     backface-visibility: hidden; }
+    @media only screen and (min-width: 75em) {
+      .header__heading {
+        grid-column: 3/ 11;
+        font-size: 6.4rem;
+        width: 40%; } }
   .header__button {
     grid-column: 2 / span 1;
     grid-row: 3 / span 1;
     align-self: start; }
+    @media only screen and (min-width: 75em) {
+      .header__button {
+        grid-column: 3 / span 1;
+        padding: 2rem; } }
 
 .weekly {
   display: grid;
@@ -265,9 +317,6 @@ main {
   background-color: var(--color-secondary);
   row-gap: 2rem;
   align-items: center; }
-  @media only screen and (min-width: 48.56em) {
-    .weekly {
-      column-gap: 2rem; } }
   .weekly__header {
     grid-column: 2 / span 1;
     grid-row: 1 / span 1;
@@ -293,6 +342,10 @@ main {
       .weekly__box-1 {
         grid-row: 4 / span 1;
         grid-column: 2 / span 2; } }
+    @media only screen and (min-width: 70.62em) {
+      .weekly__box-1 {
+        grid-row: 4 / span 1;
+        grid-column: 2 / span 3; } }
   .weekly__box-2 {
     grid-column: 2 / 12;
     grid-row: 5 / span 1;
@@ -301,6 +354,10 @@ main {
       .weekly__box-2 {
         grid-row: 4 / span 1;
         grid-column: 5 / span 3; } }
+    @media only screen and (min-width: 70.62em) {
+      .weekly__box-2 {
+        grid-row: 4 / span 1;
+        grid-column: 6 / span 4; } }
   .weekly__button {
     grid-column: 2/ 12;
     grid-row: 6 / span 1;

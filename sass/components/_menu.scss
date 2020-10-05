@@ -1,6 +1,10 @@
 .menu {
-    grid-column: 2 / 12;
     grid-row: 7 / span 1;
+    grid-column: 2 / 12;
+    @include respond(1130) {
+        grid-column: 2 / 7;
+        align-self: stretch;
+    }
     display: grid;
     grid-column: repeat(2, 1fr);
     padding: 2rem 1rem;
@@ -16,13 +20,13 @@
         height: 4rem;
         max-width: 100%;
         justify-self: end;
+        margin-right: 1rem;
     }
     &__list {
         grid-column: 1 / span 2;
     }
     &__item {
         hyphens: auto;
-        margin-top: 1rem;
         list-style-position: inside;
         list-style-type: 1;
         text-indent: -1em;

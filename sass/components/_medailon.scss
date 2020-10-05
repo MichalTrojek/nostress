@@ -1,13 +1,17 @@
 .medailon {
-    grid-row: 4 / span 1;
-    grid-column: 2 / span 1;
-    justify-self: left;
     height: 9rem;
     width: 9rem;
+    @include respond(777) {
+        width: 8rem;
+        height: 8rem;
+    }
+    @include respond(999) {
+        width: 10rem;
+        height: 10rem;
+    }
     border-radius: 50%;
     background-color: var(--color-primary);
     position: relative;
-    animation: moveUp 2s;
     backface-visibility: hidden;
     &__text {
         color: var(--color-secondary);
@@ -15,7 +19,11 @@
         position: absolute;
         text-align: center;
         font-size: 1rem;
-        letter-spacing: 0.1rem;
+        letter-spacing: 0.3rem;
+        @include respond(999) {
+            font-size: 1.3rem;
+            letter-spacing: 0.2rem;
+        }
         font-weight: 700;
         top: 50%;
         left: 50%;

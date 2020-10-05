@@ -12,27 +12,29 @@
 </head>
 
 <body>
+
     <div class="container">
         <header class="header" id="header">
-            <nav class="navigation grid">
+            <nav class="navigation">
                 <img src="img/logo.png" alt="NoStress logo" class="navigation__logo">
                 <ul class="navigation__list">
-                    <li class="navigation__item">Týdenní menu</li>
-                    <li class="navigation__item">objednat jidlo</li>
-                    <li class="navigation__item">jídelní lístek</li>
-                    <li class="navigation__item">novinky</li>
-                    <li class="navigation__item">kontakt</li>
+                    <li class="navigation__item"><a href="#weekly" class="navigation__link">Týdenní menu</a> </li>
+                    <li class="navigation__item"> <a href="#order" class="navigation__link">objednat jidlo</a> </li>
+                    <li class="navigation__item"><a href="#drink" class="navigation__link">jídelní lístek</a></li>
+                    <li class="navigation__item"><a href="#news" class="navigation__link">Novinky</a> </li>
+                    <li class="navigation__item"> <a href="#contact" class="navigation__link">Kontakt</a> </li>
                 </ul>
+                <div class="navigation__medailon medailon">
+                    <p class="medailon__text">nově kopečková zmrzlina</p>
+                </div>
             </nav>
-            <div class="medailon">
-                <p class="medailon__text">nově kopečková zmrzlina</p>
-            </div>
+
             <h1 class="header__heading heading-1">Nyní rozvážíme po celém Brně.</h1>
             <a href="#" class="header__button button button--animated">objednat rozvoz</a>
 
         </header>
         <main>
-            <section class="weekly">
+            <section class="weekly" id="weekly">
                 <h2 class="weekly__header heading-2">Týdenní menu</h2>
                 <p class="weekly__text weekly__text-1">Polední Menu se skládá z hlavního chodu a polévky a je možno si ho objednat předem.<br> <span class="weekly__text--yellow">Objednávku s 5 a více jídel Vám dovemezeme až domů.</span><br> Rozvoz jídel v tuto chvíli upravujeme a plánujeme
                     možnost objednat z celého jídelního lístku. <br> Objednávku do 10km Vám rádi zavezeme za 29,-. <br> <span class="weekly__text--yellow">Objednávku se 3 a více jídly dovezeme zdarma. </span><br> <span class="weekly__text--uppercase">nabídka platí do vyprodání zásob</span></p>
@@ -55,54 +57,57 @@
                         <li class="menu__item">Tvarohové knedlíky s jahodovou náplní, tvaroh, máslo, cukr <span>89,-</span> (1,7)</li>
                     </ol>
                 </div>
-                <div class="soups">
-                    <h3 class="soups__header heading-3">POLÉVKA k menu zdarma</h3>
-                    <img src="img/soups-logo.png" alt="icon of spoon" class="soups__icon">
-                    <table class="soups__table">
-                        <tr>
-                            <td>Pondělí</td>
-                            <td>17.8.</td>
-                            <td>Drůbeží vývar s těstovinou</td>
-                            <td>(1,3,9)</td>
-                        </tr>
-                        <tr>
-                            <td>Uterý</td>
-                            <td>18.8.</td>
-                            <td>Gulášová</td>
-                            <td>(1,3,9)</td>
-                        </tr>
-                        <tr>
-                            <td>Středa</td>
-                            <td>19.8.</td>
-                            <td>Dýňový krém</td>
-                            <td>(1,3,9)</td>
-                        </tr>
-                        <tr>
-                            <td>Čtvrtek</td>
-                            <td>20.8.</td>
-                            <td>Česnečka</td>
-                            <td>(1,3,9)</td>
-                        </tr>
-                        <tr>
-                            <td>Pátek</td>
-                            <td>21.8.</td>
-                            <td>Bramborová a houbami</td>
-                            <td>(1,3,9)</td>
-                        </tr>
-                    </table>
 
-                </div>
 
-                <div class="soups-info">
-                    <p>Cena namostatné polévky <span>39,-</span></p>
-                    <p>Seznam alergenů na vyžádání u obsluhy.</p>
+                <div class="soups-box">
+                    <div class="soups">
+                        <h3 class="soups__header heading-3">POLÉVKA k menu zdarma</h3>
+                        <img src="img/soups-logo.png" alt="icon of spoon" class="soups__icon">
+                        <table class="soups__table">
+                            <tr>
+                                <td>Pondělí</td>
+                                <td>17.8.</td>
+                                <td>Drůbeží vývar s těstovinou (1,3,9) </td>
+
+                            </tr>
+                            <tr>
+                                <td>Uterý</td>
+                                <td>18.8.</td>
+                                <td>Gulášová (1,3,9)</td>
+
+                            </tr>
+                            <tr>
+                                <td>Středa</td>
+                                <td>19.8.</td>
+                                <td>Dýňový krém (1,3,9)</td>
+
+                            </tr>
+                            <tr>
+                                <td>Čtvrtek</td>
+                                <td>20.8.</td>
+                                <td>Česnečka (1,3,9)</td>
+
+                            </tr>
+                            <tr>
+                                <td>Pátek</td>
+                                <td>21.8.</td>
+                                <td>Bramborová a houbami (1,3,9)</td>
+
+                            </tr>
+                        </table>
+
+                    </div>
+                    <div class="soups-info">
+                        <p>Cena namostatné polévky <span>39,-</span></p>
+                        <p>Seznam alergenů na vyžádání u obsluhy.</p>
+                    </div>
                 </div>
             </section>
 
 
 
-            <section class="order">order</section>
-            <section class="delivery">
+            <section class="order" id="order">order</section>
+            <section class="delivery" id="delvery">
                 <h2 class="delivery__header heading-2">Odpoledni rozvoz</h2>
                 <p class="delivery__text">
                     Objednejte si na telefonním čísle +420 732 161 372 nebo pomocí formuláře a jídlo nachystáme bez čekání nebo přivezeme. Objednávku ve vzdálenosti do 10km Vám rádi přivezeme cena dopravného 29,-. <span>Objednávku se 3 a více jídly dovezeme zdarma.</span>
@@ -127,12 +132,12 @@
 
 
             </section>
-            <section class="drink">
+            <section class="drink" id="drink">
                 <h2 class="drink__header heading-2">Jídelní a nápojový lístek</h2>
                 <a href="" target="_blank" class="button cta">
                     <img src="img/cta.png" alt="cta image"> Otevřít jídelní lístek</a>
             </section>
-            <section class="news">
+            <section class="news" id="news">
                 <h2 class="news__header">Novinky</h2>
                 <div class="news__card1 card">
                     <img src="img/food.png" alt="food icon" class="card__img">
@@ -151,7 +156,7 @@
             </section>
         </main>
 
-        <footer class="footer">
+        <footer class="footer" id="contact">
             <h2 class="footer__header">Kontakt</h2>
 
             <div class="footer__info">
@@ -182,6 +187,7 @@
         </footer>
 
     </div>
+
 </body>
 
 </html>
