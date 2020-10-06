@@ -91,20 +91,26 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    align-items: center;
     @include respond(777) {
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
     }
     &__copyright {
-        @include respond(1200) {
-            width: 17%;
+        @include respond(777) {
+            width: 18%;
             text-align: start;
         }
     }
     &__information-1:link,
     &__information-1:visited {
         color: var(--color-primary);
+    }
+    &__information-2 {
+        @include respond(777) {
+            width: 25%;
+        }
     }
     &__createdby {
         margin-bottom: 1rem;
