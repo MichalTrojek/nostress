@@ -31,6 +31,7 @@
     &__map {
         grid-column: 2 / 12;
         width: 100%;
+        filter: grayscale(100%);
         @include respond(777) {
             grid-column: 7/ 12;
             height: 100%;
