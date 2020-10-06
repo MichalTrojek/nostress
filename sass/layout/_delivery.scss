@@ -4,15 +4,25 @@
     background-color: var(--color-secondary);
     row-gap: 3rem;
     padding: 2rem 0;
+    @include respond(1200) {
+        padding-bottom: 5rem;
+    }
     &__header {
-        grid-column: 2 / 12;
         grid-row: 1 / span 1;
+        grid-column: 2 / 12;
+        @include respond(1200) {
+            grid-column: 3 / 12;
+        }
     }
     &__text {
-        grid-column: 2 / 12;
         grid-row: 2 / span 1;
+        grid-column: 2 / 12;
         @include respond(777) {
             grid-column: 2/ 10;
+        }
+        @include respond(1200) {
+            grid-column: 3 / 9;
+            width: 75%;
         }
         span {
             color: var(--color-tertiary);
@@ -25,6 +35,9 @@
         @include respond(777) {
             grid-row: 2 / span 1;
             grid-column: 11 / span 1;
+        }
+        @include respond(1200) {
+            grid-column: 10 / span 1;
         }
     }
 }
@@ -39,6 +52,9 @@
     grid-template-columns: repeat(1, 1fr);
     @include respond(777) {
         padding: 1rem 2rem;
+    }
+    @include respond(1200) {
+        grid-column: 3 / 11;
     }
     &__header {
         grid-column: 1 / span 1;

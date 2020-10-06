@@ -8,16 +8,25 @@
     @include respond(777) {
         //column-gap: 2rem;
     }
+    @include respond(1200) {
+        padding-bottom: 5rem;
+    }
     &__header {
         grid-column: 2 / span 1;
         grid-row: 1 / span 1;
         white-space: nowrap;
+        @include respond(1200) {
+            grid-column: 3 / span 1;
+        }
     }
     &__text {
         columns: 1;
         hyphens: auto;
         text-align: left;
         grid-column: 2 / 12;
+        @include respond(1200) {
+            grid-column: 3 / 12;
+        }
         color: var(--color-primary);
         &-1 {
             grid-row: 2 / span 1;
@@ -39,9 +48,11 @@
             grid-row: 4 / span 1;
             grid-column: 2 / span 2;
         }
-        @include respond(1130) {
+        @include respond(1200) {
             grid-row: 4 / span 1;
-            grid-column: 2 / span 3;
+            grid-column: 3 / span 3;
+            font-size: 2rem;
+            max-width: 45rem;
         }
     }
     &__box-2 {
@@ -52,9 +63,11 @@
             grid-row: 4 / span 1;
             grid-column: 5 / span 3;
         }
-        @include respond(1130) {
+        @include respond(1200) {
             grid-row: 4 / span 1;
             grid-column: 6 / span 4;
+            font-size: 2rem;
+            max-width: 45rem;
         }
     }
     &__button {
@@ -63,7 +76,8 @@
         text-align: center;
         @include respond(777) {
             grid-row: 4 / span 1;
-            grid-column: 11 / span 1;
+            grid-column: 10 / span 1;
+            font-size: 2rem;
         }
     }
 }

@@ -10,17 +10,25 @@
     @include respond(777) {
         column-gap: 4rem;
     }
+    @include respond(1200) {
+        column-gap: 0;
+        padding-bottom: 5rem;
+    }
     &__header {
         color: var(--color-secondary);
         grid-row: 1 / span 1;
         grid-column: 1/ -1;
         text-align: center;
+        padding: 2rem 0;
     }
     &__card1 {
         grid-row: 2 / span 1;
         grid-column: 2 / 12;
         @include respond(777) {
             grid-column: 2 / 7;
+        }
+        @include respond(1200) {
+            grid-column: 3 / 7;
         }
     }
     &__card2 {
@@ -29,6 +37,9 @@
         @include respond(777) {
             grid-row: 2 / span 1;
             grid-column: 7 / 12;
+        }
+        @include respond(1200) {
+            grid-column: 7 / 11;
         }
     }
 }

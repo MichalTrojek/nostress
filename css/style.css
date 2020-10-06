@@ -205,10 +205,11 @@ main {
   grid-column: repeat(2, 1fr);
   padding: 2rem 1rem;
   border: 1px solid var(--color-primary); }
-  @media only screen and (min-width: 70.62em) {
+  @media only screen and (min-width: 75em) {
     .menu {
-      grid-column: 2 / 7;
-      align-self: stretch; } }
+      grid-column: 3 / 7;
+      align-self: stretch;
+      padding-left: 3rem; } }
   .menu__header {
     grid-column: 1 / span 1;
     grid-row: 1 / span 1;
@@ -234,10 +235,10 @@ main {
 .soups-box {
   grid-row: 8 / span 1;
   grid-column: 2 / 12; }
-  @media only screen and (min-width: 70.62em) {
+  @media only screen and (min-width: 75em) {
     .soups-box {
       grid-row: 7 / 8;
-      grid-column: 7 / 12;
+      grid-column: 7 / 11;
       align-self: stretch; } }
 
 .soups {
@@ -261,6 +262,9 @@ main {
     grid-row: 2 / span 1; }
     .soups__table td {
       white-space: nowrap; }
+  @media only screen and (min-width: 75em) {
+    .soups {
+      padding-left: 3rem; } }
 
 .soups-info {
   display: flex;
@@ -272,6 +276,10 @@ main {
   line-height: 2; }
   .soups-info span {
     color: var(--color-tertiary); }
+  @media only screen and (min-width: 75em) {
+    .soups-info {
+      align-items: flex-start;
+      padding-left: 3rem; } }
 
 .header {
   grid-row: 1 / span 1;
@@ -317,16 +325,25 @@ main {
   background-color: var(--color-secondary);
   row-gap: 2rem;
   align-items: center; }
+  @media only screen and (min-width: 75em) {
+    .weekly {
+      padding-bottom: 5rem; } }
   .weekly__header {
     grid-column: 2 / span 1;
     grid-row: 1 / span 1;
     white-space: nowrap; }
+    @media only screen and (min-width: 75em) {
+      .weekly__header {
+        grid-column: 3 / span 1; } }
   .weekly__text {
     columns: 1;
     hyphens: auto;
     text-align: left;
     grid-column: 2 / 12;
     color: var(--color-primary); }
+    @media only screen and (min-width: 75em) {
+      .weekly__text {
+        grid-column: 3 / 12; } }
     .weekly__text-1 {
       grid-row: 2 / span 1; }
     .weekly__text-2 {
@@ -342,10 +359,12 @@ main {
       .weekly__box-1 {
         grid-row: 4 / span 1;
         grid-column: 2 / span 2; } }
-    @media only screen and (min-width: 70.62em) {
+    @media only screen and (min-width: 75em) {
       .weekly__box-1 {
         grid-row: 4 / span 1;
-        grid-column: 2 / span 3; } }
+        grid-column: 3 / span 3;
+        font-size: 2rem;
+        max-width: 45rem; } }
   .weekly__box-2 {
     grid-column: 2 / 12;
     grid-row: 5 / span 1;
@@ -354,10 +373,12 @@ main {
       .weekly__box-2 {
         grid-row: 4 / span 1;
         grid-column: 5 / span 3; } }
-    @media only screen and (min-width: 70.62em) {
+    @media only screen and (min-width: 75em) {
       .weekly__box-2 {
         grid-row: 4 / span 1;
-        grid-column: 6 / span 4; } }
+        grid-column: 6 / span 4;
+        font-size: 2rem;
+        max-width: 45rem; } }
   .weekly__button {
     grid-column: 2/ 12;
     grid-row: 6 / span 1;
@@ -365,7 +386,8 @@ main {
     @media only screen and (min-width: 48.56em) {
       .weekly__button {
         grid-row: 4 / span 1;
-        grid-column: 11 / span 1; } }
+        grid-column: 10 / span 1;
+        font-size: 2rem; } }
 
 .delivery {
   display: grid;
@@ -373,15 +395,25 @@ main {
   background-color: var(--color-secondary);
   row-gap: 3rem;
   padding: 2rem 0; }
+  @media only screen and (min-width: 75em) {
+    .delivery {
+      padding-bottom: 5rem; } }
   .delivery__header {
-    grid-column: 2 / 12;
-    grid-row: 1 / span 1; }
+    grid-row: 1 / span 1;
+    grid-column: 2 / 12; }
+    @media only screen and (min-width: 75em) {
+      .delivery__header {
+        grid-column: 3 / 12; } }
   .delivery__text {
-    grid-column: 2 / 12;
-    grid-row: 2 / span 1; }
+    grid-row: 2 / span 1;
+    grid-column: 2 / 12; }
     @media only screen and (min-width: 48.56em) {
       .delivery__text {
         grid-column: 2/ 10; } }
+    @media only screen and (min-width: 75em) {
+      .delivery__text {
+        grid-column: 3 / 9;
+        width: 75%; } }
     .delivery__text span {
       color: var(--color-tertiary); }
   .delivery__button {
@@ -392,6 +424,9 @@ main {
       .delivery__button {
         grid-row: 2 / span 1;
         grid-column: 11 / span 1; } }
+    @media only screen and (min-width: 75em) {
+      .delivery__button {
+        grid-column: 10 / span 1; } }
 
 .delivery-menu {
   border: 1px solid var(--color-primary);
@@ -404,6 +439,9 @@ main {
   @media only screen and (min-width: 48.56em) {
     .delivery-menu {
       padding: 1rem 2rem; } }
+  @media only screen and (min-width: 75em) {
+    .delivery-menu {
+      grid-column: 3 / 11; } }
   .delivery-menu__header {
     grid-column: 1 / span 1;
     grid-row: 2 / span 1;
@@ -441,11 +479,15 @@ main {
   padding-top: 2rem;
   row-gap: 3rem;
   justify-items: center; }
+  @media only screen and (min-width: 75em) {
+    .drink {
+      padding: 5rem; } }
   .drink__header {
     white-space: nowrap;
     grid-row: 1 / span 1;
     grid-column: 1 / -1;
-    text-align: center; }
+    text-align: center;
+    padding-bottom: 2rem; }
 
 .cta {
   max-width: 25rem;
@@ -468,17 +510,25 @@ main {
   @media only screen and (min-width: 48.56em) {
     .news {
       column-gap: 4rem; } }
+  @media only screen and (min-width: 75em) {
+    .news {
+      column-gap: 0;
+      padding-bottom: 5rem; } }
   .news__header {
     color: var(--color-secondary);
     grid-row: 1 / span 1;
     grid-column: 1/ -1;
-    text-align: center; }
+    text-align: center;
+    padding: 2rem 0; }
   .news__card1 {
     grid-row: 2 / span 1;
     grid-column: 2 / 12; }
     @media only screen and (min-width: 48.56em) {
       .news__card1 {
         grid-column: 2 / 7; } }
+    @media only screen and (min-width: 75em) {
+      .news__card1 {
+        grid-column: 3 / 7; } }
   .news__card2 {
     grid-row: 3 / span 1;
     grid-column: 2 / 12; }
@@ -486,6 +536,9 @@ main {
       .news__card2 {
         grid-row: 2 / span 1;
         grid-column: 7 / 12; } }
+    @media only screen and (min-width: 75em) {
+      .news__card2 {
+        grid-column: 7 / 11; } }
 
 .card {
   background-color: var(--color-primary);
@@ -515,7 +568,11 @@ main {
   @media only screen and (min-width: 48.56em) {
     .footer {
       column-gap: 2rem; } }
+  @media only screen and (min-width: 75em) {
+    .footer {
+      column-gap: 10rem; } }
   .footer__header {
+    padding: 2rem 0;
     grid-column: 1/ -1;
     text-align: center; }
   .footer__info {
@@ -525,6 +582,10 @@ main {
         grid-row: 2 / span 1;
         grid-column: 2/ 7;
         max-width: 35rem; } }
+    @media only screen and (min-width: 75em) {
+      .footer__info {
+        grid-column: 3 / 7;
+        justify-self: center; } }
   .footer__map {
     grid-column: 2 / 12;
     width: 100%; }
@@ -532,6 +593,11 @@ main {
       .footer__map {
         grid-column: 7/ 12;
         height: 100%; } }
+    @media only screen and (min-width: 75em) {
+      .footer__map {
+        grid-row: 2 / span 2;
+        grid-column: 6 / 11;
+        justify-self: start; } }
 
 .infobox {
   border: 1px solid var(--color-primary);
@@ -566,7 +632,7 @@ main {
 
 .bottom {
   grid-column: 1/ -1;
-  padding: 1rem 1rem 1rem 1rem;
+  padding: 1rem 1rem;
   background-color: var(--color-quaternary);
   display: flex;
   flex-direction: column;

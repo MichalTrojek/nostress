@@ -6,6 +6,9 @@
     grid-template-columns: repeat(12, 1fr);
     padding: 5rem;
     padding-top: 2rem;
+    @include respond(1200) {
+        padding: 5rem;
+    }
     row-gap: 3rem;
     justify-items: center;
     &__header {
@@ -13,6 +16,7 @@
         grid-row: 1 / span 1;
         grid-column: 1 / -1;
         text-align: center;
+        padding-bottom: 2rem;
     }
 }
 

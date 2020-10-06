@@ -1,9 +1,9 @@
 .soups-box {
     grid-row: 8 / span 1;
     grid-column: 2 / 12;
-    @include respond(1130) {
+    @include respond(1200) {
         grid-row: 7 / 8;
-        grid-column: 7 / 12;
+        grid-column: 7 / 11;
         align-self: stretch;
     }
 }
@@ -33,6 +33,9 @@
             white-space: nowrap;
         }
     }
+    @include respond(1200) {
+        padding-left: 3rem;
+    }
 }
 
 .soups-info {
@@ -45,5 +48,9 @@
     line-height: 2;
     span {
         color: var(--color-tertiary);
+    }
+    @include respond(1200) {
+        align-items: flex-start;
+        padding-left: 3rem;
     }
 }
