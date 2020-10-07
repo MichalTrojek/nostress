@@ -1,11 +1,4 @@
 .menu {
-    grid-row: 7 / span 1;
-    grid-column: 2 / 12;
-    @include respond(1200) {
-        grid-column: 3 / 7;
-        align-self: stretch;
-        padding-left: 3rem;
-    }
     display: grid;
     grid-column: repeat(2, 1fr);
     padding: 2rem 1rem;

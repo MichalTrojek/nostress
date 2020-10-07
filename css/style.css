@@ -104,15 +104,10 @@ main {
   outline: 0; }
 
 .navigation {
-  grid-row: 1 / span 1;
-  grid-column: 2/ -1;
   align-items: center;
   display: flex;
   justify-content: space-between;
   animation: moveDown 1s; }
-  @media only screen and (min-width: 75em) {
-    .navigation {
-      grid-column: 3/ 11; } }
   .navigation__logo {
     height: 5rem;
     max-width: 100%; }
@@ -209,17 +204,10 @@ main {
     background-color: var(--color-quaternary); }
 
 .menu {
-  grid-row: 7 / span 1;
-  grid-column: 2 / 12;
   display: grid;
   grid-column: repeat(2, 1fr);
   padding: 2rem 1rem;
   border: 1px solid var(--color-primary); }
-  @media only screen and (min-width: 75em) {
-    .menu {
-      grid-column: 3 / 7;
-      align-self: stretch;
-      padding-left: 3rem; } }
   .menu__header {
     grid-column: 1 / span 1;
     grid-row: 1 / span 1;
@@ -241,15 +229,6 @@ main {
     padding-left: 1em; }
     .menu__item span {
       color: var(--color-tertiary); }
-
-.soups-box {
-  grid-row: 8 / span 1;
-  grid-column: 2 / 12; }
-  @media only screen and (min-width: 75em) {
-    .soups-box {
-      grid-row: 7 / 8;
-      grid-column: 7 / 11;
-      align-self: stretch; } }
 
 .soups {
   align-self: start;
@@ -305,6 +284,12 @@ main {
       row-gap: 6rem;
       background-position: bottom;
       background-size: cover; } }
+  .header__navigation {
+    grid-row: 1 / span 1;
+    grid-column: 2/ -1; }
+    @media only screen and (min-width: 75em) {
+      .header__navigation {
+        grid-column: 3/ 11; } }
   .header__heading {
     align-self: end;
     grid-column: 2 / -1;
@@ -362,6 +347,22 @@ main {
       color: var(--color-tertiary); }
     .weekly__text--uppercase {
       text-transform: uppercase; }
+  .weekly__menu {
+    grid-row: 7 / span 1;
+    grid-column: 2 / 12; }
+    @media only screen and (min-width: 75em) {
+      .weekly__menu {
+        grid-column: 3 / 7;
+        align-self: stretch;
+        padding-left: 3rem; } }
+  .weekly__soups-box {
+    grid-row: 8 / span 1;
+    grid-column: 2 / 12; }
+    @media only screen and (min-width: 75em) {
+      .weekly__soups-box {
+        grid-row: 7 / 8;
+        grid-column: 7 / 11;
+        align-self: stretch; } }
   .weekly__box-1 {
     grid-column: 2 / 12;
     grid-row: 4 / span 1; }
