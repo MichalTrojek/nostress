@@ -81,6 +81,10 @@
         height: 4rem;
         max-width: 100%;
     }
+    &__facebook:hover,
+    &__instagram:hover {
+        filter: brightness(90%);
+    }
 }
 
 .bottom {

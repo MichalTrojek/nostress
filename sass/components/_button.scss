@@ -17,6 +17,7 @@
     }
     &:hover {
         transform: translateY(-0.2rem);
+        filter: brightness(90%);
     }
     &:active {
         transform: translateY(0.2rem);

@@ -182,7 +182,8 @@ main {
   .button:link, .button:focus {
     text-decoration: none; }
   .button:hover {
-    transform: translateY(-0.2rem); }
+    transform: translateY(-0.2rem);
+    filter: brightness(90%); }
   .button:active {
     transform: translateY(0.2rem); }
   .button--animated {
@@ -643,6 +644,8 @@ main {
   .social__message {
     height: 4rem;
     max-width: 100%; }
+  .social__facebook:hover, .social__instagram:hover {
+    filter: brightness(90%); }
 
 .bottom {
   grid-column: 1/ -1;
