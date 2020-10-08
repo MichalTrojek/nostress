@@ -20,7 +20,7 @@
         grid-column: 1 / span 2;
         grid-row: 2 / span 1;
         td {
-            white-space: nowrap;
+            // white-space: nowrap;
         }
     }
     @include respond(1200) {

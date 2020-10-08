@@ -251,8 +251,6 @@ main {
   .soups__table {
     grid-column: 1 / span 2;
     grid-row: 2 / span 1; }
-    .soups__table td {
-      white-space: nowrap; }
   @media only screen and (min-width: 75em) {
     .soups {
       padding-left: 3rem; } }
