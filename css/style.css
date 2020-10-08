@@ -123,8 +123,6 @@ main {
       .navigation__list {
         grid-column: 3/10;
         column-gap: 2rem; } }
-  .navigation__medailon {
-    margin-right: 2rem; }
   .navigation__item {
     text-transform: uppercase;
     padding: 0.5rem; }
@@ -145,12 +143,12 @@ main {
   backface-visibility: hidden; }
   @media only screen and (min-width: 48.56em) {
     .medailon {
-      width: 8rem;
-      height: 8rem; } }
+      height: 8rem;
+      width: 8rem; } }
   @media only screen and (min-width: 62.43em) {
     .medailon {
-      width: 10rem;
-      height: 10rem; } }
+      height: 10rem;
+      width: 10rem; } }
   .medailon__text {
     color: var(--color-secondary);
     text-transform: uppercase;
