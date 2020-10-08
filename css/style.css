@@ -152,6 +152,9 @@ main {
   background-color: var(--color-primary);
   position: relative;
   backface-visibility: hidden; }
+  @media only screen and (max-width: 21em) {
+    .medailon {
+      display: none; } }
   .medailon__text {
     color: var(--color-secondary);
     text-transform: uppercase;
@@ -242,8 +245,7 @@ main {
   row-gap: 1rem; }
   .soups__header {
     grid-column: 1 / span 1;
-    grid-row: 1 / span 1;
-    white-space: nowrap; }
+    grid-row: 1 / span 1; }
   .soups__icon {
     grid-column: 2 / span 1;
     grid-row: 1 / span 1;
@@ -498,7 +500,6 @@ main {
       padding-bottom: 15rem;
       row-gap: 10rem; } }
   .drink__header {
-    white-space: nowrap;
     grid-row: 1 / span 1;
     grid-column: 1 / -1;
     text-align: center;

@@ -1,5 +1,8 @@
 .medailon {
     padding: 5rem;
+    @media only screen and (max-width: 21em) {
+        display: none;
+    }
     @include respond(777) {}
     @include respond(999) {}
     border-radius: 50%;
